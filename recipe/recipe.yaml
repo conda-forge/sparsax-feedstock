@@ -14,8 +14,8 @@ source:
   sha256: 6d69a19f8c84972536d933f86682c382aa5da2e3e71b850adb3bc73c3faba553
 
 build:
-  number: 0
-  skip: 
+  number: 1
+  skip:
     - win
     - python < "3.11"
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -34,7 +34,7 @@ requirements:
     - ninja
     - suitesparse
     - make
-  
+
   run:
     - python
     - jax >=0.9.0
