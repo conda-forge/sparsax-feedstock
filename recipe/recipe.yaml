@@ -1,9 +1,9 @@
 schema_version: 1
 
 context:
-  version: "0.9.0"
+  version: "0.9.1"
   name: "sparsax"
-  python_min: "3.11"
+  python_min: "3.12"
 
 package:
   name: ${{ name }}
@@ -11,13 +11,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sparsax-${{ version }}.tar.gz
-  sha256: 6d69a19f8c84972536d933f86682c382aa5da2e3e71b850adb3bc73c3faba553
+  sha256: 9c64b321b692c34d338f7f205e62893f028416feb038a79b1ff9a18f426be381
 
 build:
   number: 1
   skip:
     - win
-    - python < "3.11"
+    - python < "3.12"
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - python
     - scikit-build-core >=0.10
     - nanobind >=2.0
-    - jax >=0.9.0
+    - jax >=0.11.0
     - pip
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
@@ -37,7 +37,7 @@ requirements:
 
   run:
     - python
-    - jax >=0.9.0
+    - jax >=0.11.0
     - numpy
     - suitesparse
 
