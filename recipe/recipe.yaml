@@ -14,7 +14,7 @@ source:
   sha256: 6d69a19f8c84972536d933f86682c382aa5da2e3e71b850adb3bc73c3faba553
 
 build:
-  number: 1
+  number: 2
   skip:
     - win
     - python < "3.11"
