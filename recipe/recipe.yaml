@@ -31,7 +31,6 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
     - ${{ compiler('cxx') }}
-    - ninja
     - suitesparse
     - make
 
