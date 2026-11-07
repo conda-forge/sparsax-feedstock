@@ -33,6 +33,8 @@ requirements:
     - ${{ compiler('cxx') }}
     - suitesparse
     - make
+    - ninja
+    - cmake
 
   run:
     - python
